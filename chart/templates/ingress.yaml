@@ -1,0 +1,39 @@
+{{ $redirectFrontendConfigName := (printf "%s-secure-redirect" .Release.Name) }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name | quote }}
+  labels:
+    {{ include "activity.labels" . | nindent 4 }}
+  annotations:
+    networking.gke.io/v1beta1.FrontendConfig: {{ $redirectFrontendConfigName | quote }}
+    g5devops.com/external-dns: active
+    external-dns.alpha.kubernetes.io/hostname: {{ .Release.Name }}{{ if .Values.global.isProduction }}.g5marketingcloud{{ else }}-{{ .Release.Namespace }}.g5devops{{ end }}.com
+spec:
+  tls:
+    # This Secret comes from an ExternalSecret via the bootstrap process, in
+    # the gke-essentials chart. I'm unsure if changing the Secret value will
+    # update the load balancer. You'll find out. If it doesn't work, create a
+    # new secret name with the new cert's data and switch this to use that. The
+    # docs are clear that should work.
+    - secretName: custom-ingress-certs
+  rules:
+  - http:
+      paths:
+      - path: /*
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: {{ .Release.Name | quote }}
+            port:
+              name: http
+---
+apiVersion: networking.gke.io/v1beta1
+kind: FrontendConfig
+metadata:
+  name: {{ $redirectFrontendConfigName | quote }}
+  labels:
+    {{ include "activity.labels" . | nindent 4 }}
+spec:
+  redirectToHttps:
+    enabled: true
