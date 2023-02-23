@@ -52,7 +52,7 @@
     "nuxt": "^2.14.12",
     "path": "^0.12.7",
     "pg": "^8.6.0",
-    "sequelize": "^6.5.0",
+    "sequelize": "^6.28.2",
     "tiptap": "^1.29.6",
     "tiptap-extensions": "^1.32.5",
     "vue-apexcharts": "^1.6.0",
