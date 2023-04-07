@@ -24,7 +24,7 @@
     "@getg5/g5-updatable": "^2.2.3",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/google-analytics": "^2.4.0",
-    "apexcharts": "^3.20.0",
+    "apexcharts": "^3.37.1",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.16.0",
     "bull": "^3.18.0",
