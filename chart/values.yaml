@@ -15,6 +15,7 @@ node-web-service:
   auth0:
     client:
       create: true
+      allowUnifiedLogin: true
       localhostPorts:
         - 3000
         - 3001
