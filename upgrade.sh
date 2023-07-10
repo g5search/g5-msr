@@ -11,7 +11,7 @@ NC='\033[0m';
 
 Deploy()
 {
-  helm upgrade --install --namespace=default $DEPLOYMENT --set node-web-service.image.tag=$TAG --values=chart/opex-$PROJECT.yaml --set=deployer.user=$USER ./chart/;
+  helm upgrade --install --namespace=default $DEPLOYMENT --set node-web-service.image.tag=$TAG --values=chart/opex-$PROJECT-values.yaml --set=deployer.user=$USER ./chart/;
   printf "Deployed ${GREEN}$BRANCH-$SHA ${NC}to ${GREEN}$CONTEXT ${NC} \n";
 }
 
