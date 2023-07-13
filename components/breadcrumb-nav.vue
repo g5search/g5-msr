@@ -2,7 +2,7 @@
   <b-navbar class="nav-bar d-block px-0 bg-primary-70">
     <div class="w-100 d-flex mb-2 px-3 justify-content-between">
       <b-navbar-brand class="text-white d-flex align-items-baseline">
-        <b-img-lazy src="/G5-RP_logo_2023-RED.png" height="35" class="mr-2" />
+        <b-img-lazy src="/G5-RP_logo_2023-RED.png" alt="G5 Logo" height="35" class="mr-2" />
         <b-icon-alarm />
         Activity Tracker
       </b-navbar-brand>
