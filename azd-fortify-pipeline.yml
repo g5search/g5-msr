@@ -11,7 +11,7 @@ trigger: none
 pr: none 
 
 pool: 
-name: dotnet-pool
+  - name: dotnet-pool
 
 parameters: 
   - name: releaseId
