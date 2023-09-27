@@ -24,7 +24,7 @@ parameters:
     default: true
 jobs:
   - job: SAST
-    pool: dotnet-pool
+    pool: Fortify-BLD-POOL
     condition: eq('${{ parameters.sast }}', true)
     steps:
       - task: FortifyOnDemandStatic@8
