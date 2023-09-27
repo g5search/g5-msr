@@ -14,10 +14,6 @@ pool:
   name: Fortify-BLD-POOL
 
 parameters: 
-  - name: releaseId
-    displayName: Fortify on Demand Release ID    
-    type: number    
-    default: 832709
   - name: buildType
     displayName: Fortify on Demand Build Type
     type: string
@@ -36,7 +32,7 @@ jobs:
           FortifyProjects: "$(Build.SourcesDirectory)"
           FodConnection: "Fortify-Connection"
           ReleaseOptions: "0"
-          ReleaseId: "${{ parameters.releaseId }}"
+          ReleaseId: 832709
           EntitlementSelection: "1"
           EntitlementPreference: "1"
           OverrideScanSettings: "2"
