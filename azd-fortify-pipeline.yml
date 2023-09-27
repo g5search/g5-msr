@@ -11,7 +11,7 @@ trigger: none
 pr: none 
 
 pool: 
-  name: Fortify-BLD-POOL
+  name: TST-SUITE-BLD
 
 parameters: 
   - name: buildType
@@ -24,7 +24,7 @@ parameters:
     default: true
 jobs:
   - job: SAST
-    pool: Fortify-BLD-POOL
+    pool: TST-SUITE-BLD
     condition: eq('${{ parameters.sast }}', true)
     steps:
       - task: FortifyOnDemandStatic@8
