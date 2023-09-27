@@ -11,7 +11,7 @@ trigger: none
 pr: none 
 
 pool: 
-  - name: Fortify-BLD-POOL
+  name: Fortify-BLD-POOL
 
 parameters: 
   - name: releaseId
