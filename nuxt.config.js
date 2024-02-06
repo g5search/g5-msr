@@ -59,6 +59,9 @@ module.exports = {
   router: {
     middleware: ['user']
   },
+  axios: {
+    browserBaseURL: process.env.BROWSER_URL
+  },
   publicRuntimeConfig: {
     axios: {
       browserBaseURL: process.env.BROWSER_URL

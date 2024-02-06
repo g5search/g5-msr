@@ -48,15 +48,11 @@
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^6.0.1",
-    "@nuxtjs/eslint-module": "^3.0.2",
     "@vue/test-utils": "^1.0.4",
     "axios-mock-adapter": "^1.18.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^26.3.0",
-    "eslint": "^7.29.0",
-    "eslint-plugin-nuxt": "^1.0.0",
     "jest": "^26.4.2",
     "nodemon": "^2.0.4",
     "sass": "^1.70.0",
