@@ -5,9 +5,8 @@ export default async function ({ store, route, error, redirect }) {
   if (route.path === '/edit') {
     await store.dispatch('user/setUser');
     const roles = store.state.user.user.roles;
-    console.info('roles', roles);
     if (!roles || !roles.find(role => role.type === 'GLOBAL')) {
-      error('user is not GLOBAL')
+      error('No user set or user is not GLOBAL!');
     }
   }
 }
