@@ -1,5 +1,7 @@
 global:
   projectID: opex-staging-b877
+  associatedProjects:
+    content: content-staging-3b0d
   isProduction: false
   computeNetworkSelfLink: https://www.googleapis.com/compute/v1/projects/opex-staging-b877/global/networks/gke-cluster
 node-web-service:

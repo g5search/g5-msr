@@ -1,5 +1,7 @@
 global:
   projectID: opex-prime-25d3
+  associatedProjects:
+    content: content-prime-5302
   isProduction: false
   computeNetworkSelfLink: https://www.googleapis.com/compute/v1/projects/opex-prime-25d3/global/networks/gke-cluster
 node-web-service:
