@@ -15,6 +15,7 @@ node-web-service:
   auth0:
     client:
       create: true
+      allowUnifiedLogin: true
       localhostPorts:
         - 3000
         - 3001
@@ -22,6 +23,11 @@ node-web-service:
     resourceServer:
         create: false
   replicaCount: 2
+  subscriptions:
+    clients:
+      associatedProject: content
+    locations:
+      associatedProject: content
   revisionHistoryLimit: 1
   resources:
     requests:

@@ -21,9 +21,10 @@
   "dependencies": {
     "@cloudnative/health-connect": "^2.1.0",
     "@getg5/g5-auth": "^5.0.3",
-    "@getg5/g5-updatable": "^2.2.3",
+    "@getg5/g5-pub-sub-js": "^1.0.4",
+    "@getg5/g5-updatable": "^2.6.1",
+    "@google-cloud/pubsub": "^4.3.0",
     "@nuxtjs/axios": "^5.12.2",
-    "@nuxtjs/google-analytics": "^2.4.0",
     "apexcharts": "^3.20.0",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.16.0",
@@ -57,8 +58,8 @@
     "eslint": "^7.29.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "jest": "^26.4.2",
-    "node-sass": "^5.0.0",
     "nodemon": "^2.0.4",
+    "sass": "^1.70.0",
     "sass-loader": "^10.1.1",
     "vue-jest": "^3.0.6"
   }

@@ -49,7 +49,6 @@ module.exports = {
   modules: [
     'vue-scrollto/nuxt',
     'bootstrap-vue/nuxt',
-    '@nuxtjs/google-analytics',
     '@nuxtjs/axios'
   ],
   bootstrapVue: {
@@ -61,24 +60,8 @@ module.exports = {
     middleware: ['user']
   },
   publicRuntimeConfig: {
-    googleAnalytics: {
-      id: process.env.GA_PROPERTY,
-      debug: {
-        enabled: false,
-        sendHitTask: true
-      }
-    },
     axios: {
       browserBaseURL: process.env.BROWSER_URL
-    }
-  },
-  build: {
-    extend (config, ctx) {
-      if (ctx.isDev) {
-        config.devtool = ctx.isClient
-          ? 'source-map'
-          : 'inline-source-map'
-      }
     }
   }
 }
