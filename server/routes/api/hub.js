@@ -18,6 +18,6 @@ module.exports = (app) => {
       ],
       order: [['name', 'ASC']]
     })
-    res.json(clients)
+    res.json(clients) 
   })
 }

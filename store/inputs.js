@@ -74,7 +74,7 @@ export const actions = {
   },
   fillClients ({ commit }) {
     this.$axios
-      .$get('api/v1/hub/clients')
+      .$get('/api/v1/hub/clients')
       .then(clients => commit('FILL_CLIENTS', clients))
   }
 }
