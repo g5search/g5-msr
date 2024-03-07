@@ -15,11 +15,11 @@ node-web-service:
   auth0:
     client:
       create: true
-      allowUnifiedLogin: true
       localhostPorts:
         - 3000
         - 3001
         - 3002
+    allowUnifiedLogin: true
     resourceServer:
         create: false
   replicaCount: 2
@@ -134,3 +134,12 @@ node-web-service:
         secretKeyRef:
           name: activity
           key: NOTE_SERVICE_PASSWORD
+    - name: HUB_CLIENTS_SUBSCRIPTION 
+      value: 'clients-activity'
+    - name: HUB_LOCATIONS_SUBSCRIPTION
+      value: 'locations-activity'
+    - name: PROJECT_ID
+      valueFrom:
+        configMapKeyRef:
+          name: environment-info
+          key: project_id

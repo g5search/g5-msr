@@ -60,11 +60,21 @@ module.exports = {
     middleware: ['user']
   },
   axios: {
-    browserBaseURL: process.env.BROWSER_URL
+    baseURL: 'localhost',
+    browserBaseURL: 'http://localhost:3001/'
   },
   publicRuntimeConfig: {
     axios: {
       browserBaseURL: process.env.BROWSER_URL
+    }
+  },
+  build: {
+    postcss: {
+      postcssOptions: {
+        plugins: {
+          autoprefixer: {}
+        }
+      }
     }
   }
 }

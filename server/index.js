@@ -4,7 +4,6 @@ const express = require('express');
 const { Nuxt, Builder } = require('nuxt');
 const config = require('../nuxt.config.js');
 config.dev = process.env.NODE_ENV !== 'production';
-
 const models = require('./models');
 const app = express();
 

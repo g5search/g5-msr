@@ -17,7 +17,8 @@ module.exports = (app) => {
         [models.sequelize.json('properties.branded_name'), 'branded_name']
       ],
       order: [['name', 'ASC']]
-    })
-    res.json(clients) 
+    });
+    console.info(clients.length);
+    res.json(clients);
   })
 }

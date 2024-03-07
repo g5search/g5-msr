@@ -1,5 +1,7 @@
 global:
   projectID: opex-prod-ebbd
+  associatedProjects:
+    content: content-prod-cd31
   isProduction: true
   computeNetworkSelfLink: https://www.googleapis.com/compute/v1/projects/opex-prod-ebbd/global/networks/gke-cluster
 node-web-service:

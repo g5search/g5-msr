@@ -9,7 +9,7 @@
     "imageName": "activity-tracker"
   },
   "engines": {
-    "node": ">=12.15.0"
+    "node": ">=16.20.2"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
@@ -26,8 +26,8 @@
     "@google-cloud/pubsub": "^4.3.0",
     "@nuxtjs/axios": "^5.12.2",
     "apexcharts": "^3.20.0",
-    "bootstrap": "^4.5.2",
-    "bootstrap-vue": "^2.16.0",
+    "bootstrap": "^4.5.0",
+    "bootstrap-vue": "^2.15.0",
     "bull": "^3.18.0",
     "bull-arena": "^2.8.3",
     "cross-env": "^5.2.0",
@@ -36,7 +36,7 @@
     "hashids": "^2.2.1",
     "jquery": "^3.5.1",
     "lodash": "^4.17.21",
-    "nuxt": "^2.14.12",
+    "nuxt": "^2.15.8",
     "path": "^0.12.7",
     "pg": "^8.6.0",
     "sequelize": "^6.5.0",
@@ -48,7 +48,9 @@
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@vue/test-utils": "^1.0.4",
+    "autoprefixer": "^10.4.17",
     "axios-mock-adapter": "^1.18.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
